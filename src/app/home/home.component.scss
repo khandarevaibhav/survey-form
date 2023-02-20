@@ -1,0 +1,54 @@
+h2 {
+  background-color: #1a1c2d;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left{
+  display: grid;
+  margin: 55px;
+}
+
+.contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90vh;
+
+
+.form-button {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: #464b79;
+    border: 1px solid   ;
+    font-size: 16px;
+    position: relative;
+    left: 20px;
+  }
+
+  button {
+    background-color: #251ee9ed;
+    color: white;
+    margin: 10px;
+  }
+
+  button:hover {
+    background-color: rgb(104, 85, 224);
+  }
+
+  .create-form {
+    color: blue;
+    background-color: white;
+    margin: 10px;
+  }
+  .create-form:hover {
+    background-color: #251ee9ed;
+    color: white;
+  }
+
+}

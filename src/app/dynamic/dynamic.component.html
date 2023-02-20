@@ -1,0 +1,46 @@
+<div >
+  <div>
+      <h3 class="card-title text-center">{{data.title}}</h3><br><br>
+      <form >
+            <input type="email" [(ngModel)]="email" name="email" id="email" placeholder="Enter Your Email Here"><hr>
+        </form>
+      <form #form="ngForm" (ngSubmit)="saveForm(form)" novalidate>
+          
+          <div class="field" *ngFor="let que of data.questions;let i=index" [ngSwitch]="que.answerType">
+              <div>
+                  <h3 >{{que.questionContent}}</h3>
+              </div>
+
+              <div *ngSwitchCase="'Short Answer'">
+                  <textarea ngModel name={{i}} cols="40%" placeholder="write your answer here"></textarea>
+                  <br>
+              </div>
+
+              <div *ngSwitchCase="'Number'">
+                 <input type="number" ngModel name={{i}}>
+                <br>
+            </div>
+              <hr>
+              <div *ngSwitchCase="'Single Correct'">
+                  <div *ngFor="let item of que.possibleResponses">
+                      <input  type="radio" name={{i}} value={{item}} ngModel> &nbsp; {{ item }}
+                  </div><br>
+              </div>
+              <hr>
+
+              <!--<div *ngSwitchCase="'multiple'">
+                  <div *ngFor="let item of que.options;let j = index">
+                      <input type="checkbox" name="checkbox" value={{item}} ngModel> &nbsp; {{ item }}
+                  </div><br>
+              </div> -->
+              <hr>
+          </div>
+          <br>
+          <input type="checkbox" name="decleration" id="decleration" checked> Send Response Copy to Me <br>
+          <button type="submit" class="btn btn-primary">Final Submit</button>
+      </form>
+
+  </div>
+</div> 
+
+<!-- <h1>Dynamic Working</h1> -->

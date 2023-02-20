@@ -1,0 +1,66 @@
+<div class="outer">
+  <div class="container">
+      <div class="row">
+          <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+             <div class="panel border bg-white">
+               <div class="panel-heading">
+                  <h3 class="pt-3 font-weight-bold">Sign Up</h3>
+
+              </div>
+              <div class="panel-body p-3">
+                  <form  >
+                      <div class="form-group pt-3" >
+                      <div class="input-field">
+                          <span class="fa fa-user p-2"></span>
+                          <!-- ngModel is used to do twoway databinding -->
+                          <input name="firstName" type="text" placeholder="FirstName"  [(ngModel)]= "firstName">
+
+                      </div>
+                  </div>
+                  <div class="form-group pt-3">
+                      <div class="input-field">
+                          <span class="fa fa-user p-2"></span>
+                          <input name="lastName" type="text"  placeholder="LastName" [(ngModel)]= "lastName">
+
+                      </div>
+                  </div>
+                      <div class="form-group pt-3">
+                          <div class="input-field">
+                              <span class="fa fa-envelope p-2"></span>
+                              <input type="text" name="email" placeholder="Email"  [(ngModel)]= "email">
+
+                          </div>
+                      </div>
+
+                      <div class="form-group pt-3">
+                          <div class="input-field">
+                              <span class="fa fa-user p-2"></span>
+                              <input type="text" name="username" placeholder="Username"  [(ngModel)]= "username">
+
+                          </div>
+                      </div>
+                      <div class="form-group pt-3">
+                          <div class="input-field">
+                              <span class="fa fa-lock p-2"></span>
+                              <!-- [type] is property binding  -->
+                              <input [type]="type" name="password" value="" placeholder="Password"  [(ngModel)]= "password">
+                              <span (click) = "hideShowPass()"class="fa fa-eye-slash"></span>
+                          </div>
+                      </div>
+                        <button type="submit" class="btn btn-primary btn-block mt-4 w-100" (click)="handleSubmit($event)">Sign Up</button> 
+                        <!-- routerlink is like href in a tag -->
+                        <div class="text-center pt-4 text-muted">Already have account? <a id="forget" routerLink="/login">Login</a></div>
+
+                  </form>
+              </div>
+              <!-- <div class="mx-3 my-3 py-2 bordert">
+                  <div class="text-center py-3">
+                      <a href="https://www.facebook.com" target="_blank" class="px-2"><img src="https://www.dpreview.com/files/p/articles/4698742202/facebook.jpeg" alt=""></a>
+                      <a href="https://www.google.com" target="_blank" class="px-2"><img src="http://freelogopng.com/images/all_img/1657955079google-icon-png.png" alt=""></a>
+                  </div>
+              </div> -->
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

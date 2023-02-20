@@ -1,0 +1,171 @@
+.outer{
+  height:100vh;
+  background-image: url("https://images.unsplash.com/photo-1487088678257-3a541e6e3922?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bG9naW58ZW58MHx8MHx8&w=1000&q=80");
+  
+}
+
+.panel-heading{
+  text-align :center;
+  margin-bottom: 10px;
+}
+
+#forget{
+  min-width: 100px;
+  margin-left: auto;
+  text-decoration:none ;
+  cursor: pointer;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.form-inline label{
+  padding-left: 10px;
+  margin: 0;
+  cursor: pointer;
+}
+.btn{
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+.panel{
+  min-height: 380px;
+  box-shadow: 20px 20px 80px rgb(218, 218, 218);
+  border-radius: 12px;
+  margin-top: 100px;
+
+}
+
+.input-field{
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd ;
+  /* icon color like lock and eye */
+  color: black;  
+}
+
+.input-field.error{
+  border: 1px solid red;
+  color: red;
+}
+
+input[type = 'text'],
+input[type='password']{
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 100%;
+}
+
+.fa-eye-slash.btn{
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: yellow;
+  cursor: pointer;
+}
+.fa-eye-slash.btn:hover{
+ color: #000;
+}
+img{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+}
+
+.bordert{
+  border-top: 1px solid #aaa;
+  position: relative;
+}
+
+.bordert::after{
+  content: 'or connect with';
+  position: absolute;
+  top: -13px;
+  left: 33%;
+  background-color: #fff;
+  padding: 0 8px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .containerBig {
+//   width: 100%;
+//   height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+
+//   .containerSmall {
+//     width: 45%;
+//     height: 40vh;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     background: rgba(255, 255, 255, 0.2);
+//     border-radius: 16px;
+//     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+//     backdrop-filter: blur(5px);
+//     -webkit-backdrop-filter: blur(5px);
+//     border: 1px solid rgba(255, 255, 255, 0.3);
+//     background: rgba(0, 0, 0, 0.2);
+//     border-radius: 16px;
+//     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+//     backdrop-filter: blur(5px);
+//     -webkit-backdrop-filter: blur(5px);
+//     border: 1px solid rgba(255, 255, 255, 0.3);
+//   }
+
+//   .form {
+//     flex-direction: column;
+//     width: 400px;
+//     margin: 0 auto;
+
+//     .full-width {
+//       width: 100%;
+//     }
+
+//     .login {
+//       width: 100%;
+//       margin-top: 20px;
+//       background-color: #251ee9ed;
+//       color: white;
+//       padding: 10px;
+//       border: none;
+//       border-radius: 5px;
+//       cursor: pointer;
+//       &:hover {
+//         background-color: rgba(104, 85, 224, 1);
+//       }
+//     }
+//   }
+// }
+
+
+//here we have used a common file for both signIn and signup 
+//that file we maked i.e in assets we maked css in that common.css

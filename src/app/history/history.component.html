@@ -1,0 +1,11 @@
+<h4 class="history">Current users user id is {{data[0].userId}}</h4>
+
+<div>
+    <div *ngFor="let survey of data">
+        <h5 >{{survey.title}}</h5>
+        <button type="button" class="btn btn-primary" (click)="publishlink(survey._id)">Publish</button>
+        <button type="button" class="btn btn-primary" (click)="getAllResponsesBy(survey._id)">Responses of Publish</button>
+        <button type="button" class="btn btn-primary" (click)="deleteSurvey(survey._id)">Delete Form</button>
+        <hr>
+    </div>
+</div>
