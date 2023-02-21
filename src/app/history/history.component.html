@@ -5,6 +5,8 @@
         <h5 >{{survey.title}}</h5>
         <button type="button" class="btn btn-primary" (click)="publishlink(survey._id)">Publish</button>
         <button type="button" class="btn btn-primary" (click)="getAllResponsesBy(survey._id)">Responses of Publish</button>
+        <button type="button" class="btn btn-primary" (click)="download(survey._id)">Download Response</button>
+
         <button type="button" class="btn btn-primary" (click)="deleteSurvey(survey._id)">Delete Form</button>
         <hr>
     </div>

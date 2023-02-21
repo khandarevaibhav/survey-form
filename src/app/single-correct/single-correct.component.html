@@ -1,4 +1,56 @@
- <!-- <form class="example-section" [formGroup]="multipleChioce">
+<form class="example-section" [formGroup]="multipleChioce">
+  <h3> Single Choice Question</h3>
+  
+  <input
+    type = text;
+    formControlName="question"
+    placeholder="Enter your question"
+  />
+<div formArrayName="option">
+<div class="example-full-width" *ngFor="let op of options.controls;let i=index">
+  <mat-radio-button class="example-margin" >
+    <input
+    type = text;
+    [formControlName]="i"
+    placeholder="Enter Your Choice"      
+  /></mat-radio-button>
+  </div>
+  <button (click)="addNewOptions()" >Add New Option</button>
+  <button type="button" (click)="removeOption()" >- Remove Last Option</button>
+  <!-- <button (click)="getValue()">submit</button> -->
+</div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <form class="example-section" [formGroup]="multipleChioce">
   <h3> Single Choice Question</h3>
   
   <input

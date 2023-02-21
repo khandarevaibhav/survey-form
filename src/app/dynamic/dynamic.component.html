@@ -22,7 +22,7 @@
             </div>
               <hr>
               <div *ngSwitchCase="'Single Correct'">
-                  <div *ngFor="let item of que.possibleResponses">
+                  <div *ngFor="let item of que.options">
                       <input  type="radio" name={{i}} value={{item}} ngModel> &nbsp; {{ item }}
                   </div><br>
               </div>
@@ -42,5 +42,4 @@
 
   </div>
 </div> 
-
 <!-- <h1>Dynamic Working</h1> -->

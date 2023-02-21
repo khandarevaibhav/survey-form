@@ -6,8 +6,7 @@
       [cdkDropListData]="formElements"
       class="componentList"
       id="formElements"
-      (cdkDropListDropped)="drop($event)"
-    >
+      (cdkDropListDropped)="drop($event)">
       <div class="array-box-elements" *ngFor="let item of formElements" cdkDrag>
         {{ item }}
       </div>

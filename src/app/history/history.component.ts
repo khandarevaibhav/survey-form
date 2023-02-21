@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AllservicesService } from '../allservices.service';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
+import {saveAs} from 'file-saver';
+import * as Papa from 'papaparse';
+
 
 export interface Survey2 {
   question: string;
@@ -31,7 +34,7 @@ export class HistoryRootObject {
 export class HistoryComponent implements OnInit{
   public data:any;
   public token:any;
-
+  public form_response:any;
   constructor(
     private route: Router,
     public httpClient:HttpClient
@@ -101,6 +104,37 @@ export class HistoryComponent implements OnInit{
      alert("All Responses of Survey ID "+survey_id)
      window.open(`http://localhost:4200/survey_responses/${survey_id}`)
   }
+ 
+  download(survey_id:any){
+    console.log(survey_id)
+    let token_parse;
+   const auth_token=localStorage.getItem("currentuser")
+   console.log(auth_token)
+   if(auth_token){
+    token_parse=JSON.parse(auth_token)
+    this.token=token_parse["data"]["token"]
+    console.log("extract the token ", this.token)
+   }
+   let headers1 = new HttpHeaders({
+    'content-Type': 'application/json',
+    'authorization':'Bearer '+this.token 
+  });
 
+    this.httpClient.get(`http://localhost:5000/response/allresponses/${survey_id}`,{headers:headers1}).subscribe(response=>{
+      console.log(response);
+      this.form_response=response;
+      const csv = Papa.unparse({
+        // fields: this.form_response.question
+        fields: this.form_response.obj.question,
+        data:this.form_response.obj.answer,
+      });
+   
+     const blob = new Blob([csv], {type: 'text/csv;charset=utf-8;'});
+     saveAs(blob, 'data.csv')
+
+    // alert("Survey Deleted Successfully..");
+    // location.reload();
+    })
+  }
 
 }

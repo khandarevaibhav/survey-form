@@ -41,9 +41,10 @@ export class EmailComponent {
   getValue() {
     this.valueEvent.emit();
     console.log('Email: ', this.emailFormControl.value);
-    return {
-      question: this.questionControl.value,
-      value: this.emailFormControl.value,
-    };
+    // return {
+    //   question: this.questionControl.value,
+    //   value: this.emailFormControl.value,
+    // };
+    return this.emailFormControl.value;
   }
 }
