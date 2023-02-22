@@ -23,8 +23,8 @@ app.use("/form", formRouter);
 app.use("/response",responseRouter);
 
 mongoose.connect(
-    //"mongodb+srv://chinmay1819:c9403000981@cluster0.8j3na.mongodb.net/SurveyForms?retryWrites=true&w=majority"
-    'mongodb+srv://vkpatil22:MongoAtlas2206@cluster0.ydcvsiy.mongodb.net/SurveyFormst?retryWrites=true&w=majority'
+    "mongodb+srv://chinmay1819:c9403000981@cluster0.8j3na.mongodb.net/SurveyForms?retryWrites=true&w=majority"
+    //'mongodb+srv://vkpatil22:MongoAtlas2206@cluster0.ydcvsiy.mongodb.net/SurveyFormst?retryWrites=true&w=majority'
   )
   .then(() => {
     app.listen(5000, () => {
